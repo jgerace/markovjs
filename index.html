@@ -1,77 +1,80 @@
 <html>
-	<script src="markov.js" type="text/javascript"></script>
+<script src="markov.js" type="text/javascript"></script>
 
-	<head>
-		<style>
-		  	textarea {
-		  		width: 600px;
-			  	height: 400px;
-		  	}
-		  	textarea.hidden {
-		  		display: none;
-		  	}
-		</style>
-	</head>
-	<body>
-		<form>
-			<div>
-				<table>
-					<tr>
-						<td>
-							<label>Input text</label>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<textarea id="input-text"></textarea>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<div>
-								<label>Parse on</label>
-							<div>
-								<select id="input-parse-on">
-									<option value="letter" selected>Letter</option>
-									<option value="word">Word</option>
-								</select>
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<div>
-								<label>Chain length</label>
-								<div>
-									<input type="number" id="input-chain-len"></input>
-								</div>
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<div>
-								<label>Number of chars to output</label>
-								<div>
-									<input type="number" id="input-num-chars"></input>
-								</div>
-							</div>
-						</td>
-					</tr>
-				</table>
-			</div>
-			<div>
-				<table>
-					<tr>
-						<button type="button" onclick="markov()">Generate Text!</button>
-					</tr>
-					<tr>
-						<td>
-							<textarea id="generated-text" hidden></textarea>
-						</td>
-					</tr>
-				</table>
-			</div>
-		</form>
-	</body>
+<head>
+    <style>
+        textarea {
+            width: 600px;
+            height: 400px;
+        }
+        
+        textarea.hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        <label>Input text</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <textarea id="input-text"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <label>Parse on</label>
+                            <div>
+                                <select id="input-parse-on">
+                                    <option value="letter" selected>Letter</option>
+                                    <option value="word">Word</option>
+                                </select>
+                            </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <label>Chain length</label>
+                            <div>
+                                <input type="number" id="input-chain-len"></input>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <label>Number of chars to output</label>
+                            <div>
+                                <input type="number" id="input-num-chars"></input>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+    <div>
+        <table>
+            <tr>
+                <button type="button" onclick="markov()">Generate Text!</button>
+            </tr>
+            <tr>
+                <td>
+                    <textarea id="generated-text" hidden></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
 </html>
